@@ -11,7 +11,7 @@
   transition:.2s linear;
 }
 
-$green:rgb(185, 32, 32);
+$red:rgb(185, 32, 32);
 $black:#000;
 $white:#fff;
 $light-color:#777;
@@ -31,7 +31,7 @@ $box-shadow:0 1rem 1rem rgba(0,0,0,.05);
 @mixin font($size){
   font-family:'Satisfy', cursive;
   font-size:$size;
-  color:$green;
+  color:$red;
 }
 
 html{
@@ -44,16 +44,16 @@ html{
     width:1rem;
   }
   &::-webkit-scrollbar-track{
-    background:#000;
+    background:#ffffff;
   }
   &::-webkit-scrollbar-thumb{
-    background:$green;
+    background:$red;
     border-radius:5rem;
   }
 }
 
 body {
-  background-color: black;
+  background-color: white;
 }
 
 section{
@@ -70,7 +70,7 @@ section{
 
   h3{
     font-size:3rem;
-    color:$white;
+    color:black;
   }
 }
 .btn{
@@ -80,11 +80,11 @@ section{
   font-size:1.7rem;
   cursor:pointer;
   color:$white;
-  background:$green;
+  background:$red;
   border-radius:.5rem;
 
   &:hover{
-    background:$black;
+    opacity: 75%;
   }
 }
 
@@ -92,7 +92,7 @@ section{
   position:sticky;
   top:0; left:0; right:0;
   z-index:1000;
-  background:black;
+  background:white;
   box-shadow:$box-shadow;
   display:flex;
   align-items:center;
@@ -103,11 +103,11 @@ section{
   .logo{
     font-size:2.5rem;
     font-weight:bolder;
-    color:$black;
+    color:black;
 
     i{
       padding-right:.5rem;
-      color:$green;
+      color:$red;
     }
   }
 
@@ -116,10 +116,10 @@ section{
     a{
       font-size:1.4rem;
       margin:0 1rem;
-      color:$white;
+      color:black;
 
       &:hover{
-        color:$green;
+        color:$red;
       }
     }
   }
@@ -138,7 +138,7 @@ section{
 
     &:hover{
       color:$white;
-      background:$green;
+      background:$red;
     }
   }
 }
@@ -175,7 +175,7 @@ section{
     background:$black;
   }
   &::-webkit-scrollbar-thumb{
-    background:$green;
+    background:$red;
     border-radius:5rem;
   }
 
@@ -213,7 +213,7 @@ section{
           color:$black;
 
           &:hover{
-            color:$green; 
+            color:$red; 
           }
         }
 
@@ -233,7 +233,7 @@ section{
             color:$light-color;
 
             &.price{
-              color:$green;
+              color:$red;
               font-size:1.7rem;
             }
           }
@@ -265,7 +265,7 @@ section{
         padding-bottom:.7rem;
 
         span{
-          color:$green;
+          color:$red;
         }
       }
     }
@@ -336,7 +336,7 @@ section{
       color:$light-color;
 
       a{
-        color:$green;
+        color:$red;
 
         &:hover{
           color:$black;
@@ -350,35 +350,34 @@ section{
 .home{
   display:flex;
   align-items: center;
-  flex-wrap:wrap-reverse;
   gap:2rem;
   position:relative;
   overflow: hidden;
 
   .content{
-    flex:1 1 41rem;
+    width: 50%;
 
     span{
       font-size:2rem;
-      color:$green;
+      color:$red;
     }
 
     h3{
       font-size:4rem;
-      color:$white;
+      color:black;
       padding-top:1rem;
     }
 
     p{
       font-size:1.4rem;
-      color:$light-color;
+      color:black;
       line-height:2;
       padding:1rem 0;
     }
   }
 
   .image{
-    flex:1 1 41rem;
+    width: 50%;
     margin:2rem 0;
     pointer-events:none;
 
@@ -407,7 +406,7 @@ section{
 
     &:hover{
 
-      background:$green;
+      background:$red;
 
       h3{
         color:$white;
@@ -501,7 +500,7 @@ section{
       cursor:pointer; 
 
       &:hover{
-        color:$green;
+        color:$red;
       }
     }
 
@@ -645,12 +644,14 @@ section{
     gap:1.5rem;
 
     &:hover{
-      background:$black;
-
-      .content h3{
-        color:$white;
+      background-color: $red;
+      .content{
+        h3, .price {
+          color: $white;
+        }
       }
     }
+
 
     img{
       height:10rem;
@@ -666,7 +667,7 @@ section{
 
       .price{
         font-size:1.8rem;
-        color:$green;
+        color:$black;
       }
     }
   }
@@ -738,7 +739,7 @@ section{
 
           i{
             padding-right: .5rem;
-            color:$green;
+            color:$red;
           }
         }
 
@@ -762,11 +763,11 @@ section{
             padding-right: .5rem;
 
             &:hover{
-              color:$green;
+              color:$red;
             }
             
             i{
-              color:$green;
+              color:$red;
               padding-right: .5rem;
             }
           }
@@ -790,7 +791,7 @@ section{
 
 
 .footer{
-  background:$black;
+  background:$white;
 
   .newsletter{
     text-align: center;
@@ -798,7 +799,7 @@ section{
 
     h3{
       font-size:2.5rem;
-      color:$white;
+      color:$black;
     }
 
     form{
@@ -815,19 +816,15 @@ section{
         padding:1rem 1.2rem;
         font-size:1.6rem;
         color:$black;
-        text-transform:none;
+        border: 1px solid $red;
       }
 
       input[type="submit"]{
         padding:0 2rem;
         font-size:1.6rem;
         color:$white;
-        background:$green;
+        background:$red;
         cursor:pointer;
-
-        &:hover{
-          background:$green;
-        }
       }
     }
   }
@@ -856,7 +853,7 @@ section{
         padding:1rem 0;
 
         &:hover{
-          color:$green;
+          color:$red;
 
           i{
             padding-right:2rem;
@@ -865,7 +862,7 @@ section{
 
         i{
           padding-right:.5rem;
-          color:$green;
+          color:$red;
         }
       }
     }
@@ -887,7 +884,7 @@ section{
       border-radius:.5rem;
       margin:0 .3rem;
       color:$white;
-      background:$green;
+      background:$red;
 
       &:hover{
         background:black;
@@ -901,7 +898,7 @@ section{
     padding:1rem;
 
     span{
-      color:$green;
+      color:$red;
     }
   }
 }
